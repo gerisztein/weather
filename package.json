@@ -1,0 +1,25 @@
+{
+  "name": "weather",
+  "version": "0.0.1",
+  "main": "weather.js",
+  "author": "Lucas Gerisztein <lucas@lucasg.com.br> (http://github.com/gerisztein)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gerisztein/weather.git"
+  },
+  "devDependencies": {
+    "bower": "^1.3.9",
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "0.0.10",
+    "gulp-concat": "^2.3.4",
+    "gulp-csso": "^0.2.9",
+    "gulp-htmlmin": "^0.2.0",
+    "gulp-inject": "^1.0.1",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-notify": "^1.5.0",
+    "gulp-plumber": "^0.6.5",
+    "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-ruby-sass": "^0.7.1"
+  }
+}

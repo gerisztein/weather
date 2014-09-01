@@ -1,0 +1,29 @@
+$colorPrimary: 	#ccc;
+$font-stack:	Helvetica, Arial, sans-serif;
+
+#weather {
+	background: $colorPrimary;
+	margin: 10px;
+	padding: 10px;
+	width: 450px;
+}
+#w_title {
+	font: 700 21px $font-stack;
+}
+#w_temperature {
+	text-shadow: 2px 2px 5px #666;
+	color: #fff;
+	float: right;
+	font-size: 42px;
+	font-weight: 700;
+}
+#w_temperature:after {
+	content: "º";
+}
+#w_description:before {
+	content: "\A";
+	white-space: pre;
+}
+#w_description {
+	font-size: 14px;
+}

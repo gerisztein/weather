@@ -1,0 +1,30 @@
+{
+  "name": "weather",
+  "main": "weather.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/gerisztein/weather",
+  "authors": [
+    "Lucas Gerisztein <lucas@lucasg.com.br>"
+  ],
+  "description": "Weather Widget",
+  "keywords": [
+    "weather",
+    "js",
+    "openweather",
+    "api"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23",
+    "normalize.scss": "~3.0.1+normalize.3.0.1",
+    "normalize.css": "~3.0.1"
+  }
+}
