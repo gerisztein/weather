@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="user-scalable=yes, width=980">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>OpenWeather API</title>
+</head>
+<body>
+
+<div id="forecast_list_ul">
+
+</div>
+
+</body>
+<script type="text/javascript">
+function getJSONP(url, success) {
+
+    var ud = '_' + +new Date,
+        script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0] 
+               || document.documentElement;
+
+    window[ud] = function(data) {
+        head.removeChild(script);
+        success && success(data);
+    };
+
+    script.src = url.replace('callback=?', 'callback=' + ud);
+    head.appendChild(script);
+
+}
+
+getJSONP('http://api.openweathermap.org/data/2.5/weather?q=Sao+Paulo,BR&callback=?', function(data){
+    //console.log(data);
+    var div = document.getElementById('forecast_list_ul');
+
+    html = "City: " + data.name + "," + data.sys.country + "<br />";
+    html += "Temperature: " + data.main.temp + "<br />";
+    html += "Description: " + data.weather[0].description;
+    div.innerHTML = html;
+});  
+</script>
+</html>
