@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" ng-app>
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="user-scalable=yes, width=980">
@@ -8,19 +8,17 @@
 
 	<!-- inject:css -->
 	<!-- endinject -->
+	<!-- inject:js -->
+	<!-- endinject -->
 	
 </head>
 <body>
 
-<aside id="weather">
-	<span id="w_title"></span>
-	<span id="w_temperature"></span>
-	<span id="w_description"></span>
+<aside id="weather" ng-controller="Weather">
+	<span id="w_title">{{weather.name}}</span>
+	<span id="w_temperature">{{weather.main.temp}}</span>
+	<span id="w_description">{{weather.weather[0].description}}</span>
 </aside>
 
 </body>
-
-<!-- inject:js -->
-<!-- endinject -->
-
 </html>

@@ -9,6 +9,7 @@ var paths = {
 	"www": 		"./app",
 	"public": 	"./app/public",
 	"src": 		"./app/assets",
+	"sys": 		"./app/system",
 	"tmp": 		"./tmp",
 	"vendor": 	"./vendor", 
 },
@@ -48,7 +49,7 @@ gulp.task('styles', ['sass'], function() {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(vendorJS.concat([paths.src + '/js/**/*.js']))
+	return gulp.src(vendorJS.concat([ paths.sys + '/**/*.js']))
 		.pipe($.plumber())
 		.pipe($.concat('weather.js'))
 		.pipe(gulp.dest(paths.public + '/js'))
@@ -58,7 +59,7 @@ gulp.task('build-html', function() {
   var target = gulp.src(paths.www + '/index.html.dist'),
   	  source = gulp.src([paths.public + '/js/**/*.js', paths.public + '/css/**/*.css']);
   return target.pipe($.inject(source, {read:false, relative: true}))
-  	.pipe($.htmlmin({collapseWhitespace: true, removeComments: true}))
+  	//.pipe($.htmlmin({collapseWhitespace: true, removeComments: true}))
     .pipe($.rename('index.html'))
     .pipe(gulp.dest(paths.www));
 });
