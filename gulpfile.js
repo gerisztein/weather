@@ -53,7 +53,7 @@ gulp.task('styles', ['sass'], function() {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(vendorJS.concat([ paths.sys + '/**/*.js', paths.src + '/js/**/*.js']))
+	return gulp.src(vendorJS.concat([ paths.sys + '/controllers/**/*.js', paths.sys + '/directives/**/*.js', paths.sys + '/services/**/*.js', paths.src + '/js/**/*.js']))
 		.pipe($.plumber())
 		.pipe($.concat('weather.js'))
 		.pipe(gulp.dest(paths.public + '/js'))
@@ -62,6 +62,11 @@ gulp.task('scripts', function() {
             message: 'Everything done!'
         }));
 });
+
+gulp.task('fonts', function() {
+	gulp.src(paths.src + '/fonts/*')
+		.pipe(gulp.dest(paths.public + '/fonts'))
+})
 
 gulp.task('build-html', function() {
 	var target = gulp.src(paths.www + '/index.html.dist'),
@@ -77,5 +82,5 @@ gulp.task('build-html', function() {
 });
 
 gulp.task('build', function(done) {
-	$.runSequence(['clean-tmp', 'clean-public'], ['styles', 'scripts'], ['build-html'], ['clean-tmp']);
+	$.runSequence(['clean-tmp', 'clean-public'], ['fonts', 'styles', 'scripts'], ['build-html'], ['clean-tmp']);
 });
