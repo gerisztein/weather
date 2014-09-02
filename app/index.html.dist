@@ -8,13 +8,14 @@
 
 	<!-- inject:css -->
 	<!-- endinject -->
+
 	<!-- inject:js -->
 	<!-- endinject -->
 	
 </head>
 <body>
 
-<aside id="weather" ng-controller="Weather" class="icon {{weather.weather[0].icon}}">
+<aside id="weather" ng-controller="Weather" class="icon{{weather.weather[0].icon}}">
 	<span id="w_title">{{weather.name}}</span>
 	<span id="w_temperature">{{weather.main.temp}}</span>
 	<span id="w_description">{{weather.weather[0].description}}</span>
