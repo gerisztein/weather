@@ -45,21 +45,37 @@ gulp.task('styles', ['sass'], function() {
 		.pipe($.concat(pkg.name + '.css'))
 		.pipe($.csso())
 		.pipe($.autoprefixer('last 2 versions', '> 1%', 'ie 9'))
-		.pipe(gulp.dest(paths.public + '/css'));
+		.pipe(gulp.dest(paths.public + '/css'))
+		.pipe($.notify({
+            title: 'Styles',
+            message: 'Everything done!'
+        }));
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(vendorJS.concat([ paths.sys + '/**/*.js']))
+	return gulp.src(vendorJS.concat([ paths.sys + '/**/*.js', paths.src + '/js/**/*.js']))
 		.pipe($.plumber())
 		.pipe($.concat('weather.js'))
 		.pipe(gulp.dest(paths.public + '/js'))
+		.pipe($.notify({
+            title: 'Scripts',
+            message: 'Everything done!'
+        }));
 });
 
 gulp.task('build-html', function() {
-  var target = gulp.src(paths.www + '/index.html.dist'),
-  	  source = gulp.src([paths.public + '/js/**/*.js', paths.public + '/css/**/*.css']);
-  return target.pipe($.inject(source, {read:false, relative: true}))
-  	//.pipe($.htmlmin({collapseWhitespace: true, removeComments: true}))
-    .pipe($.rename('index.html'))
-    .pipe(gulp.dest(paths.www));
+	var target = gulp.src(paths.www + '/index.html.dist'),
+  	    source = gulp.src([paths.public + '/js/**/*.js', paths.public + '/css/**/*.css']);
+	return target.pipe($.inject(source, {read:false, relative: true}))
+		.pipe($.htmlmin({collapseWhitespace: true, removeComments: true}))
+		.pipe($.rename('index.html'))
+		.pipe(gulp.dest(paths.www))
+		.pipe($.notify({
+	    	title: 'HTML',
+	    	message: 'HTML built!'
+		}));
+});
+
+gulp.task('build', function(done) {
+	$.runSequence(['clean-tmp', 'clean-public'], ['styles', 'scripts'], ['build-html'], ['clean-tmp']);
 });
