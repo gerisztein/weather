@@ -15,11 +15,7 @@
 </head>
 <body>
 
-<aside id="weather" ng-controller="clickWeather" class="icon{{clima.weather[0].icon}}">
-	<span id="w_title">{{clima.name}}</span>
-	<span id="w_temperature">{{clima.main.temp | number:1}}</span>
-	<span id="w_description">{{clima.weather[0].description}}</span>
-</aside>
+<click-weather id="clickweather" data-city="Sao Paulo" data-unit="metric" data-lang="pt" />
 
 </body>
 </html>
