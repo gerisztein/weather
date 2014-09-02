@@ -24,7 +24,6 @@
   ],
   "dependencies": {
     "angular": "~1.2.23",
-    "normalize.scss": "~3.0.1+normalize.3.0.1",
     "normalize.css": "~3.0.1"
   }
 }
