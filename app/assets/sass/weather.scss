@@ -1,30 +1,61 @@
-$colorPrimary: 	#ccc;
-$font-stack:	Helvetica, Arial, sans-serif;
+$colorPrimary: 		#000;
+$colorSecondary:	#fff;
+$colorAlert:		#f00;
+$colorHelper:		#333;
+$font:				Helvetica, Arial, sans-serif;
 
-#weather {
-	background: $colorPrimary;
-	margin: 10px;
-	padding: 10px;
+@font-face {
+    font-family: 'MeteoconsRegular';
+    src: url('../fonts/meteocons-webfont.eot');
+    src: url('../fonts/meteocons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/meteocons-webfont.woff') format('woff'),
+         url('../fonts/meteocons-webfont.ttf') format('truetype'),
+         url('../fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#clickweather {
+	background: #efefef;
+	border: 1px solid $colorHelper;
+	color: $colorPrimary;
+	font: normal 12px $font;
+	height: 60px;
+	margin: 20px auto;
+	padding: 10px 20px;
 	width: 450px;
+
+	.cw_name {
+		color: $colorSecondary;
+		float: left;
+		font-size: 36px;
+		font-weight: 700;
+		text-shadow: 1px 1px 2px $colorHelper;
+
+		p {
+			font-size: 12px;
+			text-transform: capitalize;
+		}
+	}
+
+	.cw_temp {
+		color: $colorSecondary;
+		float:right;
+		font-size: 48px;
+		font-weight: 700;
+		text-shadow: 1px 1px 2px $colorHelper;
+		
+		&:after {
+			content: "º";
+		}
+	}
 }
-#w_title {
-	font: 700 21px $font-stack;
-}
-#w_temperature {
-	text-shadow: 2px 2px 5px #666;
+
+.icon-01d:before {
+	float: left;
+	font: normal 48px 'MeteoconsRegular';
+	content: "4";
 	color: #fff;
-	float: right;
-	font-size: 42px;
-	font-weight: 700;
-}
-#w_temperature:after {
-	content: "º";
-}
-#w_description:before {
-	content: "\A";
-	white-space: pre;
-}
-#w_description {
-	font-size: 14px;
-	text-transform: capitalize;
+	text-shadow: 1px 1px 2px #666;
+	padding: 0 20px 0 0;
 }
