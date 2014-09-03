@@ -22,7 +22,7 @@ Just include the following tag and don't forget to specify `ng-app="clickWeather
 
 ###Example
 
-<img src="_docs/example.png" align="center" />
+<img src="_docs/example.png" align="center" width="615"/>
 
 ###Options Quick Reference
 
