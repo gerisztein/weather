@@ -3,7 +3,7 @@ app.directive('clickWeather', [function ($scope, $http) {
 	return {
 		restrict: 'E',
 		replace: true,
-		template: '<div id="clickweather"><span class="wi w-{{icon}}"></span><div><span class="w-city">{{city}}</span><span class="w-desc">{{description}}</span></div><span class="wi w-temp {{unit}}">{{temperature | number:1}}</span></div>',
+		templateUrl: 'system/views/widget.html',
 		controller: ['$scope', '$http', function($scope, $http) {
 	    	$scope.getTemp = function(city, unit, lang) {
 	    		
