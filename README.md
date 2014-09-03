@@ -20,6 +20,10 @@ Just include the following tag and don't forget to specify `ng-app="clickWeather
 </html>
 ```
 
+###Example
+
+<img src="_docs/example.png" align="center" />
+
 ###Options Quick Reference
 
 Option | Description | Default
