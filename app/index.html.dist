@@ -17,11 +17,6 @@
 
 <click-weather data-city="Sao Paulo" />
 
-<click-weather data-city="Roma" data-unit="metric" data-lang="it" />
-
-<click-weather data-city="London" data-unit="imperial" data-lang="en" />
-
-
 </div>
 </body>
 </html>
