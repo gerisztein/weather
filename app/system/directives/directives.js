@@ -3,12 +3,18 @@ app.directive('clickWeather', [function ($scope, $http) {
 	return {
 		restrict: 'E',
 		replace: true,
-		template: '<div><span class="icon-{{ icon }}"></span><span class="cw_name">{{ city }}<p>{{ description }}</p></span><span class="cw_temp">{{ temperature | number:1 }}</span></div>',
+		template: '<div id="clickweather"><span class="wi w-{{icon}}"></span><div><span class="w-city">{{city}}</span><span class="w-desc">{{description}}</span></div><span class="wi w-temp {{unit}}">{{temperature | number:1}}</span></div>',
 		controller: ['$scope', '$http', function($scope, $http) {
 	    	$scope.getTemp = function(city, unit, lang) {
+	    		
+	    		// Define default values
+	    		var a = city,
+	    		    b = unit || 'metric',
+	    		    c = lang || 'en';
+	    		
 	        	$http({
 	          		method: 'GET',
-	          		url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=' + unit + '&lang=' + lang
+	          		url: 'http://api.openweathermap.org/data/2.5/weather?q=' + a + '&units=' + b + '&lang=' + c
 	        	}).success(function(data) {
 	        		
 	        		// Attribute specific data to variables into the scope
@@ -16,6 +22,7 @@ app.directive('clickWeather', [function ($scope, $http) {
 	        		$scope.city = data.name;
 	        		$scope.description = data.weather[0].description;
 	        		$scope.temperature = data.main.temp;
+	        		$scope.unit = b;
 	        		
 	          	});
 	        }
