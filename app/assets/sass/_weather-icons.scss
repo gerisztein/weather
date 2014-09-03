@@ -1,0 +1,114 @@
+/*!
+ *  Weather Icons 1.2
+ *  Weather themed icons for Bootstrap
+ *  ------------------------------------------------------------------------------
+* Maintained at http://erikflowers.github.io/weather-icons
+ *  http://twitter.com/Erik_UX
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - Fpmt licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - CSS and LESS are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Inspired by and works great as a companion with Font Awesome
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *
+ *  Weather Icons Bootstrap Package Author - Erik Flowers - erik@helloerik.com
+ *  ------------------------------------------------------------------------------
+ *  Email: erik@helloerik.com
+ *  Twitter: http://twitter.com/Erik_UX
+ */
+@font-face {
+  font-family: 'weathericons';
+  src: url('../fonts/weathericons-regular-webfont.eot');
+  src: url('../fonts/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/weathericons-regular-webfont.woff') format('woff'),
+       url('../fonts/weathericons-regular-webfont.ttf') format('truetype'),
+       url('../fonts/weathericons-regular-webfont.svg#weathericons-regular-webfontRg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.wi {
+  display: inline-block;
+  float:left;
+  font: normal 40px/1 'weathericons';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// Celsius
+.metric:after {
+  content: "\f03c";
+}
+// Fahrenheit
+.imperial:after {
+  content: "\f045";
+}
+// Clear Sky - Day
+.w-01d:before {
+  content: "\f00d";
+}
+// Clear Sky - Night
+.w-01n:before {
+  content: "\f02e";
+}
+// Few Clouds - Day
+.w-02d:before {
+  content: "\f002";
+}
+// Few Clouds - Night
+.w-02n:before {
+  content: "\f031";
+}
+// Scattered Cloud - Day
+.w-03d:before {
+  content: "\f001";
+}
+// Scattered Cloud - Night
+.w-03n:before {
+  content: "\f023";
+}
+// Broken Clouds - Day and Night
+.w-04d:before,
+.w-04n:before {
+  content: "\f013";
+}
+// Shower Rain - Day
+.w-09d:before {
+  content: "\f009";
+}
+// Shower Rain - Night
+.w-09n:before {
+  content: "\f029";
+}
+// Rain - Day
+.w-10d:before {
+  content: "\f008";
+}
+// Rain - Night
+.w-10n:before {
+  content: "\f028";
+}
+// Thunderstorm - Day
+.w-11d:before {
+  content: "\f010";
+}
+// Thunderstorm - Night
+.w-11n:before {
+  content: "\f02d";
+}
+// Snow - Day
+.w-13d:before {
+  content: "\f00a";
+}
+// Snow - Night
+.w-13n:before {
+  content: "\f02a";
+}
+// Mist - Day and Night
+.w-50d:before,
+.w-50n:before {
+  content: "\f014";
+}

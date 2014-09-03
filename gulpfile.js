@@ -27,29 +27,17 @@ gulp.task('clean-tmp', function() {
 		.pipe($.rimraf({force:true}));
 });
 
-gulp.task('sass', function(done) {
+gulp.task('styles', function(done) {
     return gulp.src(paths.src + '/sass/*.scss')
     	.pipe($.plumber())
-        .pipe($.rubySass({sourcemap: true}))
-        .pipe(gulp.dest(paths.tmp + '/css'))
+        .pipe($.rubySass({sourcemap: true, style: 'compressed'}))
+        .pipe($.autoprefixer('last 2 versions', '> 1%', 'ie 9'))
+        .pipe(gulp.dest(paths.public + '/css'))
         .pipe($.notify({
             title: 'SASS',
             message: 'SASS compiled!'
         }));
     done(null);
-});
-
-gulp.task('styles', ['sass'], function() {
-	return gulp.src(vendorCSS.concat([paths.tmp + '/css/*.css']))
-		.pipe($.plumber())
-		.pipe($.concat(pkg.name + '.css'))
-		.pipe($.csso())
-		.pipe($.autoprefixer('last 2 versions', '> 1%', 'ie 9'))
-		.pipe(gulp.dest(paths.public + '/css'))
-		.pipe($.notify({
-            title: 'Styles',
-            message: 'Everything done!'
-        }));
 });
 
 gulp.task('scripts', function() {
