@@ -3,4 +3,5 @@ vendor/
 app/public
 app/index.html
 tmp/
+.idea/
 .sass-cache/
