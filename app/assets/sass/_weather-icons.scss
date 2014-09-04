@@ -46,6 +46,14 @@
 .imperial:after {
   content: "\f045";
 }
+// Minimum Temperature
+.w-min:before {
+  content: "\f043";
+}
+// Maximum Temperature
+.w-max:before {
+  content: "\f058";
+}
 // Clear Sky - Day
 .w-01d:before {
   content: "\f00d";

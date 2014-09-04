@@ -4,6 +4,9 @@ $colorAlert:		#f00;
 $colorHelper:		#333;
 $font:				Helvetica, Arial, sans-serif;
 
+.left { float: left }
+.right { float: right }
+
 #clickweather {
 	background: #efefef;
 	border-radius: 15px;
@@ -16,7 +19,6 @@ $font:				Helvetica, Arial, sans-serif;
 	width: 500px;
 
 	div {
-		float: left;
 		padding: 0 15px;
 	}
 
@@ -40,6 +42,20 @@ $font:				Helvetica, Arial, sans-serif;
 			float: right;
 		}
 	}
+
+  ul {
+    clear: both;
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin:0 15px 0 0;
+      div .wi {
+        float:roght;
+        font-size:14px;
+      }
+    }
+  }
 }
 
 @import "weather-icons"

@@ -1,0 +1,13 @@
+<div id="clickweather">
+    <span class="w-city">{{city}}</span>
+    <ul>
+        <li ng-repeat="day in forecast">
+            <span class="wi w-{{ day.weather[0].icon}}"></span>
+            <div class="right">
+                <span class="wi w-min">{{ day.temp.min | number:1 }}</span><br/>
+                <span class="wi w-max">{{ day.temp.max | number:1 }}</span>
+
+            </div>
+        </li>
+    </ul>
+</div>

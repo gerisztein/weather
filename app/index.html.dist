@@ -15,7 +15,8 @@
 </head>
 <body>
 
-<click-weather data-city="Sao Paulo" data-lang="pt" data-unit="metric" />
+<click-weather data-city="London" data-lang="en" data-unit="imperial" />
+<!--<click-weather-forecast data-city="London" data-lang="en" data-unit="metric" data-count="5" />-->
 
 </div>
 </body>
