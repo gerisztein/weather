@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<click-weather data-city="São Paulo" data-lang="pt" data-unit="metric" />
+<click-weather data-city="Sao Paulo" data-lang="pt" data-unit="metric" />
 
 </div>
 </body>
