@@ -7,6 +7,7 @@
 	<title>OpenWeather API</title>
 
 	<!-- inject:css -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:700,500,300,100' rel='stylesheet' type='text/css'>
 	<!-- endinject -->
 
 	<!-- inject:js -->
@@ -15,7 +16,11 @@
 </head>
 <body>
 
-<click-weather data-city="Sao Paulo" data-lang="pt" data-unit="metric" />
+<div cb-widget-weather city="Bogota" lang="pt" unit="metric"></div>
+
+<div cb-widget-weather city="London" lang="pt" unit="imperial"></div>
+
+<div cb-widget-weather city="Rio de Janeiro" lang="pt" unit="metric"></div>
 
 </div>
 </body>

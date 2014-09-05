@@ -1,0 +1,11 @@
+<aside class="cb-widget-weather">
+    <h2>{{ city }}</h2>
+
+    <div class="wi-info">
+        <img src="public/images/{{ city | lowercase }}.jpg" />
+        <div class="wi-data">
+            <span class="wi wi-icon wi-{{ icon }}"></span>
+            <span class="wi wi-temp wi-{{ unit }}">{{ temperature | number:0 }}</span>
+        </div>
+    </div>
+</aside>

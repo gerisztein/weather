@@ -2,7 +2,42 @@ $colorPrimary: 		#000;
 $colorSecondary:	#fff;
 $colorAlert:		#f00;
 $colorHelper:		#333;
-$font:				Helvetica, Arial, sans-serif;
+$font:				'Roboto', Helvetica, Arial, sans-serif;
+
+.cb-widget-weather {
+  font: 400 28px $font;
+  margin: 0 auto;
+  text-align: center;
+  width: 518px;
+
+  h2 {
+    font-size:16px;
+  }
+
+  .wi-info {
+    border: 1px solid #ffff00;
+    height: 123px;
+    position: relative;
+
+     .wi-data {
+       bottom: 0;
+       color: #fff;
+       padding: 10px;
+       position: absolute;
+     }
+
+    .wi-icon {
+      font-size:18px;
+    }
+
+    .wi-temp {
+      bottom: 0;
+      font-size: 65px;
+      font-weight: 100;
+      position: absolute;
+    }
+  }
+}
 
 #clickweather {
 	background: #efefef;

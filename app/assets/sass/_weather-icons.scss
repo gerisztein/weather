@@ -39,76 +39,79 @@
   -moz-osx-font-smoothing: grayscale;
 }
 // Celsius
-.metric:after {
-  content: "\f03c";
-}
-// Fahrenheit
-.imperial:after {
-  content: "\f045";
+//.wi-metric:after {
+//  content: "\f03c";
+//}
+//// Fahrenheit
+//.wi-imperial:after {
+//  content: "\f045";
+//}
+.wi-temp:after {
+  content: "\f042";
 }
 // Clear Sky - Day
-.w-01d:before {
+.wi-01d:before {
   content: "\f00d";
 }
 // Clear Sky - Night
-.w-01n:before {
+.wi-01n:before {
   content: "\f02e";
 }
 // Few Clouds - Day
-.w-02d:before {
+.wi-02d:before {
   content: "\f002";
 }
 // Few Clouds - Night
-.w-02n:before {
+.wi-02n:before {
   content: "\f031";
 }
 // Scattered Cloud - Day
-.w-03d:before {
+.wi-03d:before {
   content: "\f001";
 }
 // Scattered Cloud - Night
-.w-03n:before {
+.wi-03n:before {
   content: "\f023";
 }
 // Broken Clouds - Day and Night
-.w-04d:before,
-.w-04n:before {
+.wi-04d:before,
+.wi-04n:before {
   content: "\f013";
 }
 // Shower Rain - Day
-.w-09d:before {
+.wi-09d:before {
   content: "\f009";
 }
 // Shower Rain - Night
-.w-09n:before {
+.wi-09n:before {
   content: "\f029";
 }
 // Rain - Day
-.w-10d:before {
+.wi-10d:before {
   content: "\f008";
 }
 // Rain - Night
-.w-10n:before {
+.wi-10n:before {
   content: "\f028";
 }
 // Thunderstorm - Day
-.w-11d:before {
+.wi-11d:before {
   content: "\f010";
 }
 // Thunderstorm - Night
-.w-11n:before {
+.wi-11n:before {
   content: "\f02d";
 }
 // Snow - Day
-.w-13d:before {
+.wi-13d:before {
   content: "\f00a";
 }
 // Snow - Night
-.w-13n:before {
+.wi-13n:before {
   content: "\f02a";
 }
 // Mist - Day and Night
-.w-50d:before,
-.w-50n:before {
+.wi-50d:before,
+.wi-50n:before {
   content: "\f014";
 }

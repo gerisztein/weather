@@ -56,6 +56,11 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest(paths.public + '/fonts'))
 })
 
+gulp.task('images', function() {
+    gulp.src(paths.src + '/images/*')
+        .pipe(gulp.dest(paths.public + '/images'))
+})
+
 gulp.task('build-html', function() {
 	var target = gulp.src(paths.www + '/index.html.dist'),
   	    source = gulp.src([paths.public + '/js/**/*.js', paths.public + '/css/**/*.css']);
@@ -70,5 +75,5 @@ gulp.task('build-html', function() {
 });
 
 gulp.task('build', function(done) {
-	$.runSequence(['clean-tmp', 'clean-public'], ['fonts', 'styles', 'scripts'], ['build-html'], ['clean-tmp']);
+	$.runSequence(['clean-tmp', 'clean-public'], ['fonts', 'images', 'styles', 'scripts'], ['build-html'], ['clean-tmp']);
 });
