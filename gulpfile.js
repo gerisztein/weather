@@ -41,7 +41,7 @@ gulp.task('styles', function(done) {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(vendorJS.concat([ paths.sys + '/controllers/**/*.js', paths.sys + '/directives/**/*.js', paths.sys + '/services/**/*.js', paths.src + '/js/**/*.js']))
+	return gulp.src(vendorJS.concat([ paths.sys + '/controllers/**/*.js', paths.sys + '/directives/**/*.js', paths.sys + '/services/**/*.js', paths.sys + '/filters/**/*.js']))
 		.pipe($.plumber())
 		.pipe($.concat('weather.js'))
 		.pipe(gulp.dest(paths.public + '/js'))
