@@ -7,7 +7,6 @@
 	<title>OpenWeather API</title>
 
 	<!-- inject:css -->
-	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
 	<!-- endinject -->
 
 	<!-- inject:js -->
