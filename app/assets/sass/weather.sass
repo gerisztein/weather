@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700)
+@import "weather-icons"
+
+$font: 'Roboto', Helvetica, Arial, sans-serif
+$widgetBorderColor: #ffff00
+
+.cb-widget-weather
+  font: 100 28px $font
+  margin: 0 auto
+  width: 520px
+
+  h2
+    font-size: 16px
+    text-align: center
+  
+  .overlay
+    background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+    background:    -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+    background:     -ms-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+    background:      -o-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+    background:         linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ) /* IE6-8 */
+    height: 123px
+    width: 498px
+  
+  .wi-info
+    background: url('../images/loading.gif') no-repeat center center
+    background-size: 35px
+    border: 1px solid $widgetBorderColor
+    height: 123px
+    position: relative
+  
+  .wi-data
+    bottom: 0
+    color: #fff
+    padding: 0 10px
+    position: absolute
+  
+  .wi-icon
+    font-size: 18px
+
+  .wi-temp
+    font-size: 65px
+    font-weight: 100
+
+    &:after
+      font-size: 44px
+      position: absolute

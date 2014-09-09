@@ -1,0 +1,100 @@
+@font-face
+    font-family: 'weathericons'
+    src: url('../fonts/weathericons-regular-webfont.eot')
+    src: url('../fonts/weathericons-regular-webfont.eot?#iefix') format('eot')
+    src: url('../fonts/weathericons-regular-webfont.woff') format('woff')
+    src: url('../fonts/weathericons-regular-webfont.ttf')  format('truetype')
+
+// @font-face
+//     font-family: 'weathericons'
+//     src: url('../fonts/weathericons-regular-webfont.eot')
+//     src: url('../fonts/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype')
+//     src: url('../fonts/weathericons-regular-webfont.woff') format('woff')
+//     src: url('../fonts/weathericons-regular-webfont.ttf') format('truetype')
+//     src: url('../fonts/weathericons-regular-webfont.svg#weathericons-regular-webfontRg') format('svg')
+//     font-weight: normal
+//     font-style: normal
+
+.wi
+    display: inline-block
+    float:left
+    font: normal 40px/1 'weathericons'
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+// Celsius
+.wi-metric:after
+    content: "\f03c"
+
+//// Fahrenheit
+.wi-imperial:after
+    content: "\f045"
+
+//.wi-temp:after
+    content: "\f042"
+
+// Clear Sky - Day
+.wi-01d:after
+    content: "\f00d"
+
+// Clear Sky - Night
+.wi-01n:after
+    content: "\f02e"
+
+// Few Clouds - Day
+.wi-02d:after
+    content: "\f002"
+
+// Few Clouds - Night
+.wi-02n:after
+    content: "\f031"
+
+// Scattered Cloud - Day
+.wi-03d:after
+    content: "\f001"
+
+// Scattered Cloud - Night
+.wi-03n:after
+    content: "\f023"
+
+// Broken Clouds - Day and Night
+.wi-04d:after,
+.wi-04n:after
+    content: "\f013"
+
+// Shower Rain - Day
+.wi-09d:after
+    content: "\f009"
+
+// Shower Rain - Night
+.wi-09n:after
+    content: "\f029"
+
+// Rain - Day
+.wi-10d:after
+    content: "\f008"
+
+// Rain - Night
+.wi-10n:after
+    content: "\f028"
+
+// Thunderstorm - Day
+.wi-11d:after
+    content: "\f010"
+
+// Thunderstorm - Night
+.wi-11n:after
+    content: "\f02d"
+
+// Snow - Day
+.wi-13d:after
+    content: "\f00a"
+
+// Snow - Night
+.wi-13n:after
+    content: "\f02a"
+
+// Mist - Day and Night
+.wi-50d:after,
+.wi-50n:after
+    content: "\f014"

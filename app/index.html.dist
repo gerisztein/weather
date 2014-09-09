@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" ng-app="clickWeatherWidget">
+<html lang="pt-BR" data-ng-app="clickWeatherWidget">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="user-scalable=yes, width=980">
@@ -7,7 +7,7 @@
 	<title>OpenWeather API</title>
 
 	<!-- inject:css -->
-	<link href='http://fonts.googleapis.com/css?family=Roboto:700,500,300,100' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
 	<!-- endinject -->
 
 	<!-- inject:js -->
@@ -16,12 +16,11 @@
 </head>
 <body>
 
-<div cb-widget-weather city="Bogota" lang="pt" unit="metric"></div>
+<div data-widget-weather data-city="Sao Paulo"></div>
 
-<div cb-widget-weather city="London" lang="pt" unit="imperial"></div>
+<div data-widget-weather data-city="London" data-lang="pt" data-unit="imperial"></div>
 
-<div cb-widget-weather city="Rio de Janeiro" lang="pt" unit="metric"></div>
+<div data-widget-weather data-city="Rio de Janeiro" data-lang="pt" data-unit="metric"></div>
 
-</div>
 </body>
 </html>

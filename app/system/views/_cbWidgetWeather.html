@@ -1,11 +1,13 @@
-<aside class="cb-widget-weather">
-    <h2>{{ city }}</h2>
+<section class="cb-widget-weather">
+  
+  <h2>{{ city }}</h2>
 
-    <div class="wi-info">
-        <img src="public/images/{{ city | lowercase }}.jpg" />
-        <div class="wi-data">
-            <span class="wi wi-icon wi-{{ icon }}"></span>
-            <span class="wi wi-temp wi-{{ unit }}">{{ temperature | number:0 }}</span>
-        </div>
+  <div class="wi-info">
+    <img ng-src="{{ image }}" title="{{ city }} ({{ temperature | number:1 }}º) - {{ description }}" alt="{{ description }}" />
+    <div class="wi-data overlay"></div>
+    <div class="wi-data">
+      <span class="wi wi-temp wi-{{ unit }}">{{ temperature | number:0 }}</span>
+      <span class="wi wi-icon wi-{{ icon }}"></span>
     </div>
-</aside>
+  </div>
+</section>

@@ -28,9 +28,9 @@ gulp.task('clean-tmp', function() {
 });
 
 gulp.task('styles', function(done) {
-    return gulp.src(paths.src + '/sass/*.scss')
+    return gulp.src(paths.src + '/sass/*.sass')
     	.pipe($.plumber())
-        .pipe($.rubySass({sourcemap: true, style: 'compressed'}))
+        .pipe($.rubySass({sourcemap: true}))
         .pipe($.autoprefixer('last 2 versions', '> 1%', 'ie 9'))
         .pipe(gulp.dest(paths.public + '/css'))
         .pipe($.notify({
@@ -41,9 +41,10 @@ gulp.task('styles', function(done) {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(vendorJS.concat([ paths.sys + '/controllers/**/*.js', paths.sys + '/directives/**/*.js', paths.sys + '/services/**/*.js', paths.sys + '/filters/**/*.js']))
+	return gulp.src(vendorJS.concat([ paths.sys + '/app.js', paths.sys + '/**/*.js']))
 		.pipe($.plumber())
 		.pipe($.concat('weather.js'))
+        .pipe($.uglify({mangle:false}))
 		.pipe(gulp.dest(paths.public + '/js'))
 		.pipe($.notify({
             title: 'Scripts',
