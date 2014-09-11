@@ -4,6 +4,12 @@
 $font: 'Roboto', Helvetica, Arial, sans-serif
 $widgetBorderColor: #ffff00
 
+.left
+  float: left
+
+.right
+  float: right
+
 .cb-widget-weather
   font: 100 28px $font
   margin: 0 auto
@@ -35,6 +41,37 @@ $widgetBorderColor: #ffff00
     color: #fff
     padding: 0 10px
     position: absolute
+  
+  .wi-icon
+    font-size: 18px
+
+  .wi-temp
+    font: 100 65px $font
+
+    &:after
+      font: normal 36px 'weathericons'
+      margin: 5px 0 0 3px
+      position: absolute
+
+.cb-widget-weather-02
+  background: #efefef
+  border-radius: 20px
+  box-shadow: 2px 1px 5x #f3f3f3
+  color: #333
+  font: 100 28px 'Helvetica Neue'
+  margin: 30px auto
+  padding: 0 20px
+  width: 550px
+
+  h2
+    font: 100 48px $font
+
+  .wi-info
+    background-size: 35px
+    height: 123px
+
+  .wi-data
+    padding: 0 10px
   
   .wi-icon
     font-size: 18px

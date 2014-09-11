@@ -7,7 +7,7 @@
             controller: 'widgetWeatherCtrl',
             replace: true,
             restrict: 'A',
-            templateUrl: 'system/views/_cbWidgetWeather.html',
+            templateUrl: 'system/views/_cbWidgetWeather2.html',
             scope: {},
             link: function(scope, element, attr) {
                 var city = attr.city,
