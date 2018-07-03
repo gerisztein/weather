@@ -1,8 +1,8 @@
-#Weather (Angular Directive)
+# Weather (Angular Directive)
 
 An Angular Directive using the [**OpenWeather API**](http://www.openweathermap.org/api).
 
-##Usage
+## Usage
 
 Just include the following tag and don't forget to specify `ng-app="clickWeatherWidget"`.
 
@@ -20,11 +20,11 @@ Just include the following tag and don't forget to specify `ng-app="clickWeather
 </html>
 ```
 
-###Example
+### Example
 
 <img src="_docs/example.png" align="center" width="615"/>
 
-###Options Quick Reference
+### Options Quick Reference
 
 Option | Description | Default
 ---|---|---
@@ -34,6 +34,6 @@ data-lang | Language. Options available: English - `en`, Russian - `ru`, Italian
 
 Visit the [**OpenWeather API Documentation**](http://www.openweathermap.org/api) for more info.
 
-##Thanks
+## Thanks
 
 Thanks to [**OpenWeather**](http://www.openweathermap.org) for the amazing [**API**](http://www.openweathermap.org/api) and to [**Erik Flowers**](https://github.com/erikflowers) for the incredible [**Weather Icons**](https://github.com/erikflowers/weather-icons) set.
